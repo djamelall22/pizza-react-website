@@ -1,17 +1,18 @@
-import { Nav, NavLink, NavIcons, Bars } from './styles/NavbarElements';
+import React from 'react';
+import { Nav, NavLink, NavIcon, Bars } from './NavbarElements';
 
-function Navbar() {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
-        <NavLink to="/">Pizza</NavLink>
-        <NavIcons>
+        <NavLink to='/'>Pizza</NavLink>
+        <NavIcon onClick={toggle}>
           <p>Menu</p>
           <Bars />
-        </NavIcons>
+        </NavIcon>
       </Nav>
     </>
   );
-}
+};
 
 export default Navbar;
